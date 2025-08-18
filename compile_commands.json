@@ -1,0 +1,18 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-g",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "out/ann.o",
+      "src/ann.c"
+    ],
+    "directory": "/home/m1829js/Documents/git/centix",
+    "file": "/home/m1829js/Documents/git/centix/src/ann.c",
+    "output": "/home/m1829js/Documents/git/centix/out/ann.o"
+  }
+]

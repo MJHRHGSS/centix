@@ -1,11 +1,15 @@
-CC=gcc
-CFLAGS=-Wall -Wextra -Iinclude
-SRC=src/main.c
-OBJ=$(SRC:.c=.o)
-TARGET=out/cx
-PHONY:all
+ifeq ($(OS),Windows_NT)
+	EXT :=.exe
+else
+	EXT :=
+endif
+CC = gcc
+CFLAGS = -Wall -Wextra -g -Iinclude
+SRC = $(wildcard src/*.c)
+OBJ = $(patsubst src/%.c,out/%.o,$(SRC))
+TARGET = bin/cx$(EXT)
 all:$(TARGET)
 $(TARGET):$(OBJ)
 	$(CC) $(OBJ) -o $@
-%.o:%.c 
+out/%.o:src/%.c 
 	$(CC) $(CFLAGS) -c $< -o $@
