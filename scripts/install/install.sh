@@ -6,6 +6,6 @@ cd ../..
 echo "Compiling..."
 scripts/build.sh
 echo "Moving files..."
-sudo cp out/cx /usr/local/bin/cx
+sudo cp bin/cx /usr/local/bin/cx
 sudo chmod +x /usr/local/bin/cx
 echo "Done!"
